@@ -15,7 +15,7 @@ WORKDIR /seata
 RUN set -x \
     && wget  https://github.com/seata/seata/releases/download/v${SEATA_VERSION}/seata-server-${SEATA_VERSION}.tar.gz -P /seata \
     && tar -xzvf seata-server-${SEATA_VERSION}.tar.gz \
-    && mv /seata/* ./ \
+    && mv seata/* ./ \
     && rm -rf seata* \
     && ln -snf /usr/share/zoneinfo/$TIME_ZONE /etc/localtime && echo '$TIME_ZONE' > /etc/timezone
 
