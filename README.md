@@ -7,13 +7,15 @@ https://github.com/seata/seata
 https://github.com/seata/seata-samples/tree/docker/springboot-dubbo-fescar
 
 ## 本地构建(体验)
+
 ```sh
 git clone https://github.com/seata/seata-docker.git
 cd seata-docker
-docker build -t seata:0.5.1 .\build\
+docker build -t seata:0.9.0 ./build/
 ```
 
 ## 案例使用帮助
+
 由于一些原因, seata docker 镜像使用暂不提供容器外部调用 ,那么需要案例相关项目也在容器内部 和 seata 镜像保持link模式
 
 ```sh
