@@ -12,9 +12,7 @@ ARG SEATA_VERSION=0.9.0
 
 WORKDIR /seata
 
-# && echo net.ipv4.ip_forward=1 >> /etc/sysctl.conf \ && systemctl restart network \
 RUN set -x \
-    && echo 140.82.113.4 github.com  >> /etc/hosts \
     && wget  https://github.com/seata/seata/releases/download/v${SEATA_VERSION}/seata-server-${SEATA_VERSION}.tar.gz -P /seata \
     && tar -xzvf seata-server-${SEATA_VERSION}.tar.gz \
     && mv seata/* ./ \
